@@ -1,0 +1,19 @@
+<header class="cabecera-sitio">
+  <div class="cabecera-fila">
+    <a routerLink="/inicio" class="marca"><span class="marca-hoja">❖</span> NutriAndina</a>
+    <div class="cabecera-usuario">
+      <span>{{ usuario?.nombres }} {{ usuario?.apellidos }}</span>
+      <button class="btn btn-salir" (click)="logout()">Cerrar sesión</button>
+    </div>
+  </div>
+  <nav class="cabecera-nav">
+      <a routerLink="/inicio" routerLinkActive="activo">Inicio</a>
+      <a routerLink="/establecimiento" routerLinkActive="activo">Establecimientos</a>
+      <a routerLink="/comunidad" routerLinkActive="activo">Comunidades</a>
+      <a routerLink="/nino" routerLinkActive="activo">Niños</a>
+      <a routerLink="/insignia" routerLinkActive="activo">Insignias</a>
+      <a routerLink="/premiofisico" routerLinkActive="activo">Premios físicos</a>
+      <a routerLink="/ingrediente" routerLinkActive="activo">Ingredientes</a>
+      <a routerLink="/plato" routerLinkActive="activo">Platos</a>
+  </nav>
+</header>

@@ -1,0 +1,57 @@
+<app-menu />
+
+<section class="portada">
+  <div class="portada-texto">
+    <span class="etiqueta">Prevención de anemia infantil</span>
+    <h1>Hola, {{ usuario?.nombres }}</h1>
+    <p>Administra establecimientos, niños, alimentación y premios desde un solo lugar.</p>
+  </div>
+</section>
+
+<div class="pagina">
+  <h2 class="subtitulo">¿Qué deseas administrar?</h2>
+  <div class="tarjetas">
+    <a class="tarjeta" routerLink="/establecimiento">
+      <div class="tarjeta-icono">🏥</div>
+      <h3>Establecimientos</h3>
+      <p>Centros de salud registrados</p>
+      <span class="tarjeta-enlace">Administrar →</span>
+    </a>
+    <a class="tarjeta" routerLink="/comunidad">
+      <div class="tarjeta-icono">🏘️</div>
+      <h3>Comunidades</h3>
+      <p>Comunidades que atiende cada centro</p>
+      <span class="tarjeta-enlace">Administrar →</span>
+    </a>
+    <a class="tarjeta" routerLink="/nino">
+      <div class="tarjeta-icono">👶</div>
+      <h3>Niños</h3>
+      <p>Niños en seguimiento</p>
+      <span class="tarjeta-enlace">Administrar →</span>
+    </a>
+    <a class="tarjeta" routerLink="/insignia">
+      <div class="tarjeta-icono">🏅</div>
+      <h3>Insignias</h3>
+      <p>Insignias por semanas de racha</p>
+      <span class="tarjeta-enlace">Administrar →</span>
+    </a>
+    <a class="tarjeta" routerLink="/premiofisico">
+      <div class="tarjeta-icono">🎁</div>
+      <h3>Premios físicos</h3>
+      <p>Premios que se pueden entregar</p>
+      <span class="tarjeta-enlace">Administrar →</span>
+    </a>
+    <a class="tarjeta" routerLink="/ingrediente">
+      <div class="tarjeta-icono">🥬</div>
+      <h3>Ingredientes</h3>
+      <p>Alimentos y su tipo de hierro</p>
+      <span class="tarjeta-enlace">Administrar →</span>
+    </a>
+    <a class="tarjeta" routerLink="/plato">
+      <div class="tarjeta-icono">🍲</div>
+      <h3>Platos</h3>
+      <p>Platos y sus ingredientes</p>
+      <span class="tarjeta-enlace">Administrar →</span>
+    </a>
+  </div>
+</div>

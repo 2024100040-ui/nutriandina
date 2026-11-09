@@ -1,0 +1,61 @@
+<app-menu />
+
+<div class="pagina">
+  <div class="pagina-cabecera">
+    <div>
+      <h1>Comunidades</h1>
+      <p>Comunidades que atiende cada centro</p>
+    </div>
+    <button class="btn btn-principal" (click)="nuevo()">+ Añadir nuevo</button>
+  </div>
+
+  <div class="tabla-caja">
+  <p-table [value]="items" [paginator]="true" [rows]="10"
+           [tableStyle]="{ 'min-width': '40rem' }" dataKey="id">
+    <ng-template #header>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Establecimiento</th>
+        <th>Acciones</th>
+      </tr>
+    </ng-template>
+
+    <ng-template #body let-item>
+      <tr>
+        <td>{{ item.id }}</td>
+        <td>{{ item.nombre }}</td>
+        <td>{{ item.establecimiento_nombre }}</td>
+        <td>
+          <button class="btn btn-editar" (click)="editar(item)">Actualizar</button>
+          <button class="btn btn-borrar" (click)="eliminar(item)">Eliminar</button>
+        </td>
+      </tr>
+    </ng-template>
+
+    <ng-template #emptymessage>
+      <tr><td colspan="4">No hay registros.</td></tr>
+    </ng-template>
+  </p-table>
+  </div>
+</div>
+
+<p-dialog [(visible)]="verDialogo" [modal]="true" [style]="{ width: '450px' }" header="Comunidades - datos">
+  <div class="formulario">
+    <div class="campo">
+      <label>Nombre</label>
+      <input type="text" [(ngModel)]="comunidad.nombre" />
+    </div>
+    <div class="campo">
+      <label>Establecimiento</label>
+      <select [(ngModel)]="comunidad.establecimiento">
+        <option *ngFor="let e of establecimientos" [ngValue]="e.id">{{ e.nombre }}</option>
+      </select>
+    </div>
+  </div>
+
+  <ng-template #footer>
+    <button class="btn btn-gris" (click)="verDialogo = false">Cancelar (no guardar)</button>
+    <button class="btn btn-principal" (click)="guardar()">Guardar cambios</button>
+  </ng-template>
+</p-dialog>

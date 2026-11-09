@@ -1,0 +1,21 @@
+<div class="login-fondo">
+  <div class="login-caja">
+    <div class="login-logo">❖</div>
+    <h1>NutriAndina</h1>
+    <p class="login-sub">Prevención de anemia infantil</p>
+
+    <div class="campo">
+      <label>Usuario</label>
+      <input type="text" [(ngModel)]="username" placeholder="Ingrese su usuario" />
+    </div>
+
+    <div class="campo">
+      <label>Contraseña</label>
+      <input type="password" [(ngModel)]="password" placeholder="Ingrese su contraseña" (keyup.enter)="login()" />
+    </div>
+
+    @if (error) { <p class="error">{{ error }}</p> }
+
+    <button class="btn btn-principal btn-ancho" (click)="login()">Iniciar sesión</button>
+  </div>
+</div>
